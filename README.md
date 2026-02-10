@@ -74,53 +74,13 @@ cd Portfolio
 2. **Accéder au site**
    - Ouvrir http://localhost:8000 dans votre navigateur
 
-## 📦 Sections du portfolio
 
-### 🏠 Accueil
-Introduction avec présentation dynamique et liens vers les réseaux sociaux
-
-### 🎯 Projets
-Catalogue interactif de 6 projets avec :
-- **Sushi Fast** - Application web e-commerce (HTML/CSS/JS/PHP/MySQL)
-- **Vetux Line** - Application de tri algorithmique (JavaScript)
-- **GuessWhat** - Jeu interactif (JavaScript/HTML/CSS)
-- **Bucket List** - Gestionnaire de tâches (En cours)
-- **BLB Transfert** - Application mobile logistique (Flutter)
-- **Les Initiés** - Site e-commerce (Shopify)
-
-### 💪 Compétences
-Visualisation des compétences techniques :
-- Flutter (30%)
-- HTML (25%)
-- CSS (20%)
-- JavaScript (20%)
-- PHP (40%)
-- MySQL (35%)
-- Shopify (70%)
-- VMware (55%)
-
-### 💼 Expériences
-Timeline professionnelle et académique (2020-2025)
-
-### 🎓 Certifications
-Section dédiée aux certifications (à compléter)
-
-### 📡 Veille technologique
-Agrégateur d'articles filtrables par domaine :
-- Intelligence Artificielle
-- Langages de développement
-- Cybersécurité
-
-### 📬 Contact
-Formulaire de contact pour opportunités professionnelles
 
 
 ## 🔗 Liens utiles
 
 - **GitHub** : [@wepurple](https://github.com/wepurple)
 - **LinkedIn** : [Kilian Molière](https://www.linkedin.com/in/kilian-moli%C3%A8re-016b99231/)
-- **X (Twitter)** : [@kilian_mlr](https://twitter.com/kilian_mlr)
-
 
 
 ## 📄 Licence
