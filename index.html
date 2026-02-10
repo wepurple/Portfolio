@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kilian Moliere</title>
+    <meta
+      name="description"
+      content="Portfolio de Kilian Moliere, apprenti developpeur. Projets, competences, experiences et veille technologique." />
+    <link rel="icon" type="image/x-icon" href="ressources/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#accueil" class="brand">KM</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="main-nav">
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+          <a href="#projets">Projets</a>
+          <a href="#range">Competences</a>
+          <a href="#exp">Experiences</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#veilletechno">Veille</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="accueil" class="intro section">
+        <div class="container intro-layout reveal">
+          <div class="intro-content">
+            <p class="eyebrow">Portfolio BTS SIO</p>
+            <h1>Kilian Moliere</h1>
+            <p class="typing" aria-live="polite"></p>
+            <p class="intro-text">
+              Je conçois des interfaces claires et des applications utiles, avec
+              une approche orientee qualite de code et experience utilisateur.
+            </p>
+            <div class="intro-actions">
+              <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+              <a href="#exp" class="btn btn-ghost">Mes experiences</a>
+            </div>
+            <div class="social-links" aria-label="Reseaux sociaux">
+              <a
+                href="https://github.com/wepurple"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/kilian-moli%C3%A8re-016b99231/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              <a
+                href="https://twitter.com/kilian_mlr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >X</a
+              >
+            </div>
+          </div>
+          <div class="intro-motion" aria-hidden="true" data-intro-motion>
+            <div class="intro-motion-grid"></div>
+            <div class="intro-motion-glow intro-motion-glow-a"></div>
+            <div class="intro-motion-glow intro-motion-glow-b"></div>
+            <div
+              class="intro-motion-shape intro-motion-shape-a"
+              data-motion-shape></div>
+            <div
+              class="intro-motion-shape intro-motion-shape-b"
+              data-motion-shape></div>
+            <div
+              class="intro-motion-shape intro-motion-shape-c"
+              data-motion-shape></div>
+            <div class="intro-motion-label">Creative Dev System</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pres" class="section">
+        <div class="container about-card reveal">
+          <h2>Qui suis-je ?</h2>
+          <div class="about-grid about-grid-pro">
+            <article class="about-panel">
+              <h3>Mon profil</h3>
+              <p>
+                Je suis Kilian Moliere, etudiant en BTS SIO option SLAM. Je
+                developpe des applications web et mobiles avec une approche
+                pragmatique: code propre, interfaces claires et solutions utiles
+                pour les besoins metier.
+              </p>
+            </article>
+
+            <article class="about-panel">
+              <h3>Mon parcours</h3>
+              <p>
+                Apres un bac STI2D, j'ai choisi le BTS SIO pour me specialiser
+                en developpement. J'ai renforce ma formation par des experiences
+                en entreprise sur l'e-commerce, le support informatique et la
+                gestion de projets techniques, ce qui m'a donne une vision
+                complete: technique, operationnelle et orientee resultat.
+              </p>
+            </article>
+
+            <article class="about-panel">
+              <h3>Mon objectif professionnel</h3>
+              <p>
+                Mon objectif est d'evoluer vers un role de consultant en
+                intelligence artificielle. Je veux accompagner les entreprises
+                dans l'identification de cas d'usage IA, la conception de
+                prototypes utiles et l'integration de solutions fiables dans
+                leurs processus.
+              </p>
+            </article>
+
+            <article class="about-panel">
+              <h3>Mes centres d'interet IA</h3>
+              <p>
+                Je m'interesse particulierement a l'IA appliquee au
+                developpement logiciel: automatisation de taches, assistance a
+                la qualite de code, optimisation des workflows et aide a la
+                decision. Je maintiens une veille active sur l'IA, les langages
+                et la cybersecurite pour consolider cette orientation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Catalogue de projets</h2>
+            <p>
+              Une vue unique de l'ensemble de mes projets avec filtres par type,
+              domaine, technologies et niveau d'avancement.
+            </p>
+          </div>
+
+          <div class="project-catalog" data-project-catalog>
+            <div
+              class="project-toolbar"
+              role="toolbar"
+              aria-label="Filtres projets">
+              <label class="project-field">
+                <span>Type</span>
+                <select data-filter="type">
+                  <option value="all">Tous</option>
+                  <option value="scolaire">Scolaire</option>
+                  <option value="personnel">Personnel</option>
+                  <option value="professionnel">Professionnel</option>
+                </select>
+              </label>
+
+              <label class="project-field">
+                <span>Domaine</span>
+                <select data-filter="domain">
+                  <option value="all">Tous</option>
+                  <option value="developpement">Developpement</option>
+                  <option value="base-de-donnees">Base de donnees</option>
+                  <option value="systeme">Systeme</option>
+                  <option value="multimedia">Multimedia</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </label>
+
+              <label class="project-field">
+                <span>Technologie</span>
+                <select data-filter="tech">
+                  <option value="all">Toutes</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="php">PHP</option>
+                  <option value="mysql">MySQL</option>
+                  <option value="flutter">Flutter</option>
+                  <option value="shopify">Shopify</option>
+                  <option value="vmware">VMware</option>
+                </select>
+              </label>
+
+              <label class="project-field">
+                <span>Avancement</span>
+                <select data-filter="status">
+                  <option value="all">Tous</option>
+                  <option value="termine">Termine</option>
+                  <option value="en-cours">En cours</option>
+                  <option value="en-veille">En veille</option>
+                </select>
+              </label>
+
+              <label class="project-field project-field-search">
+                <span>Recherche</span>
+                <input
+                  type="search"
+                  data-filter="query"
+                  placeholder="Titre, techno, objectif..."
+                  autocomplete="off" />
+              </label>
+            </div>
+
+            <p class="project-result" data-project-count aria-live="polite"></p>
+
+            <div class="project-grid">
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="scolaire"
+                data-domain="developpement"
+                data-status="termine"
+                data-tech="html css javascript php mysql">
+                <img
+                  src="ressources/Project/sushi.jpeg"
+                  alt="Projet Sushi Fast" />
+                <div class="card-content">
+                  <h3>Sushi Fast</h3>
+                  <p>
+                    Application web de commande en ligne pour une carte de
+                    sushis.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Scolaire</li>
+                    <li><strong>Domaine:</strong> Developpement</li>
+                    <li><strong>Avancement:</strong> Termine</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> concevoir une base e-commerce
+                    fonctionnelle avec gestion produit et parcours utilisateur
+                    clair.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span
+                    ><span>PHP</span><span>MySQL</span>
+                  </div>
+                  <a
+                    href="https://github.com/BTSIOAlternant/SushiFast"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-card"
+                    >Consulter</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="scolaire"
+                data-domain="developpement"
+                data-status="termine"
+                data-tech="javascript algorithmie ux">
+                <img
+                  src="ressources/Project/vetux.png"
+                  alt="Projet Vetux Line" />
+                <div class="card-content">
+                  <h3>Vetux Line</h3>
+                  <p>
+                    Application de tri et melange de cartes avec logique
+                    algorithmique.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Scolaire</li>
+                    <li><strong>Domaine:</strong> Developpement</li>
+                    <li><strong>Avancement:</strong> Termine</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> creer une application rapide et
+                    fiable pour automatiser des operations de tri.
+                  </p>
+                  <div class="project-tags">
+                    <span>JavaScript</span><span>Algorithmie</span
+                    ><span>UX</span>
+                  </div>
+                  <a
+                    href="https://github.com/BTSIOAlternant/Vetux-line"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-card"
+                    >Consulter</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="personnel"
+                data-domain="developpement"
+                data-status="termine"
+                data-tech="javascript html css jeu ux">
+                <img
+                  src="ressources/Project/carte.jpeg"
+                  alt="Projet GuessWhat" />
+                <div class="card-content">
+                  <h3>GuessWhat</h3>
+                  <p>
+                    Jeu interactif en JavaScript avec interactions front-end
+                    dynamiques.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Personnel</li>
+                    <li><strong>Domaine:</strong> Developpement</li>
+                    <li><strong>Avancement:</strong> Termine</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> proposer une experience ludique
+                    fluide avec un code front propre et evolutif.
+                  </p>
+                  <div class="project-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span
+                    ><span>UX</span>
+                  </div>
+                  <a
+                    href="https://github.com/wepurple/Projet-GuessWhat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-card"
+                    >Consulter</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="personnel"
+                data-domain="developpement"
+                data-status="en-cours"
+                data-tech="javascript html css">
+                <img
+                  src="ressources/Project/bucket-list.png"
+                  alt="Projet Bucket List" />
+                <div class="card-content">
+                  <h3>Bucket List</h3>
+                  <p>
+                    Gestionnaire de taches avec suivi d'avancement et edition
+                    rapide.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Personnel</li>
+                    <li><strong>Domaine:</strong> Developpement</li>
+                    <li><strong>Avancement:</strong> En cours</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> construire un outil simple de
+                    gestion personnelle orientee productivite.
+                  </p>
+                  <div class="project-tags">
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                  </div>
+                  <a
+                    href="https://github.com/wepurple"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-card"
+                    >Consulter</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="professionnel"
+                data-domain="developpement"
+                data-status="termine"
+                data-tech="flutter mobile qr">
+                <img
+                  src="ressources/Project/BLB.jpg"
+                  alt="Projet BLB Transfert" />
+                <div class="card-content">
+                  <h3>BLB Transfert</h3>
+                  <p>
+                    Application mobile de devis et suivi logistique avec scan QR
+                    code.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Professionnel</li>
+                    <li><strong>Domaine:</strong> Developpement</li>
+                    <li><strong>Avancement:</strong> Termine</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> simplifier les operations terrain
+                    et accelerer le traitement des informations clients.
+                  </p>
+                  <div class="project-tags">
+                    <span>Flutter</span><span>Mobile</span><span>QR Code</span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="card project-entry tilt-card"
+                data-project-card
+                data-type="professionnel"
+                data-domain="autre"
+                data-status="termine"
+                data-tech="shopify ecommerce seo">
+                <img
+                  src="ressources/Project/Lesinities.png"
+                  alt="Projet Les Inities" />
+                <div class="card-content">
+                  <h3>Les Inities</h3>
+                  <p>
+                    Conception et exploitation d'un site e-commerce sous
+                    Shopify.
+                  </p>
+                  <ul class="project-meta">
+                    <li><strong>Type:</strong> Professionnel</li>
+                    <li><strong>Domaine:</strong> Autre</li>
+                    <li><strong>Avancement:</strong> Termine</li>
+                  </ul>
+                  <p class="project-goal">
+                    <strong>Objectif:</strong> creer une vitrine commerciale
+                    performante et facile a administrer.
+                  </p>
+                  <div class="project-tags">
+                    <span>Shopify</span><span>E-commerce</span><span>SEO</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="project-empty" data-project-empty hidden>
+              Aucun projet ne correspond aux filtres selectionnes.
+            </p>
+            <div class="project-more-wrap">
+              <button
+                id="project-load-more"
+                type="button"
+                class="btn btn-ghost btn-small"
+                hidden>
+                Afficher plus de projets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="range" class="section section-dark">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Mes competences</h2>
+            <p>Un apercu synthétique de mes technologies principales.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card tilt-card" style="--level: 30%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                    alt="Logo Flutter" />
+                  Flutter
+                </span>
+                <strong>30%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 25%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="Logo HTML5" />
+                  HTML
+                </span>
+                <strong>25%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 20%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="Logo CSS3" />
+                  CSS
+                </span>
+                <strong>20%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 20%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="Logo JavaScript" />
+                  JavaScript
+                </span>
+                <strong>20%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 40%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                    alt="Logo PHP" />
+                  PHP
+                </span>
+                <strong>40%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 35%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                    alt="Logo MySQL" />
+                  MySQL
+                </span>
+                <strong>35%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 70%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo skill-logo-mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg"
+                    alt="Logo Shopify" />
+                  Shopify
+                </span>
+                <strong>70%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+
+            <article class="skill-card tilt-card" style="--level: 55%">
+              <div class="skill-top">
+                <span class="skill-label">
+                  <img
+                    class="skill-logo skill-logo-mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vmware.svg"
+                    alt="Logo VMware" />
+                  VMware
+                </span>
+                <strong>55%</strong>
+              </div>
+              <div class="skill-bar"><span></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="exp" class="section exp-section">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Mes experiences</h2>
+            <p>
+              Parcours professionnel et academique presente sous un format clair
+              et orienté resultats.
+            </p>
+          </div>
+
+          <div class="exp-pro-layout">
+            <aside class="exp-summary card">
+              <p class="exp-summary-kicker">Synthese</p>
+              <h3>Profil en evolution continue</h3>
+              <p>
+                Experience operationnelle en entreprise, maitrise des outils
+                e-commerce et progression constante vers un profil developpement
+                complet.
+              </p>
+              <div class="exp-stats">
+                <div>
+                  <strong>4+</strong>
+                  <span>annees de terrain</span>
+                </div>
+                <div>
+                  <strong>3</strong>
+                  <span>environnements metier</span>
+                </div>
+                <div>
+                  <strong>2</strong>
+                  <span>projets applicatifs majeurs</span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="exp-list">
+              <article class="exp-item card">
+                <div class="exp-item-head">
+                  <div>
+                    <p class="exp-period">2025 - Aujourd'hui</p>
+                    <h3>Lycee SPBB - BTS SIO</h3>
+                    <p class="exp-role">Etudiant - Option SLAM</p>
+                  </div>
+                  <span class="exp-badge">Formation</span>
+                </div>
+                <ul class="exp-points">
+                  <li>
+                    Consolidation des fondations en developpement applicatif et
+                    base de donnees.
+                  </li>
+                  <li>
+                    Mise en pratique sur des projets de groupe avec exigences de
+                    qualite de code.
+                  </li>
+                  <li>
+                    Approche methodique: architecture, tests, documentation et
+                    livraison.
+                  </li>
+                </ul>
+                <div class="exp-stack">
+                  <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                </div>
+              </article>
+
+              <article class="exp-item card">
+                <div class="exp-item-head">
+                  <div>
+                    <p class="exp-period">2022 - 2025</p>
+                    <h3>Les Inities</h3>
+                    <p class="exp-role">
+                      Vendeur, Community manager, Gestion informatique
+                    </p>
+                  </div>
+                  <span class="exp-badge">Entreprise</span>
+                </div>
+                <ul class="exp-points">
+                  <li>
+                    Gestion et optimisation continue du site e-commerce
+                    (catalogue, contenu, qualite).
+                  </li>
+                  <li>
+                    Pilotage de la communication digitale et suivi des
+                    performances.
+                  </li>
+                  <li>
+                    Support informatique interne pour fiabiliser les operations
+                    quotidiennes.
+                  </li>
+                </ul>
+                <div class="exp-stack">
+                  <span>Shopify</span><span>SEO</span><span>Support IT</span>
+                </div>
+              </article>
+
+              <article class="exp-item card">
+                <div class="exp-item-head">
+                  <div>
+                    <p class="exp-period">2021 - 2022</p>
+                    <h3>BLB Transfert</h3>
+                    <p class="exp-role">Developpement mobile</p>
+                  </div>
+                  <span class="exp-badge">Projet</span>
+                </div>
+                <ul class="exp-points">
+                  <li>
+                    Creation d'une application mobile pour les devis et la
+                    consultation des donnees clients.
+                  </li>
+                  <li>
+                    Integration du scan QR pour accelerer la traçabilite des
+                    operations.
+                  </li>
+                  <li>
+                    Amelioration de la fluidite terrain et reduction des
+                    manipulations manuelles.
+                  </li>
+                </ul>
+                <div class="exp-stack">
+                  <span>Flutter</span><span>UX Mobile</span><span>QR</span>
+                </div>
+              </article>
+
+              <article class="exp-item card">
+                <div class="exp-item-head">
+                  <div>
+                    <p class="exp-period">2020 - 2022</p>
+                    <h3>Lycee LDV SIO</h3>
+                    <p class="exp-role">Formation SLAM</p>
+                  </div>
+                  <span class="exp-badge">Formation</span>
+                </div>
+                <ul class="exp-points">
+                  <li>
+                    Apprentissage du cycle de vie logiciel de la conception a la
+                    livraison.
+                  </li>
+                  <li>
+                    Travail sur les fondamentaux reseau et les environnements
+                    collaboratifs.
+                  </li>
+                  <li>
+                    Premiers projets structures autour de la specialite
+                    developpement.
+                  </li>
+                </ul>
+                <div class="exp-stack">
+                  <span>HTML/CSS</span><span>SQL</span><span>Git</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section cert-section">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Certifications</h2>
+            <p>
+              Section dediee a l'ensemble de mes certifications, avec organisme,
+              date et domaine de competence.
+            </p>
+          </div>
+
+          <div class="cert-grid">
+            <article class="card cert-card">
+              <div class="cert-head">
+                <h3>Certification IA - A renseigner</h3>
+                <span class="cert-status">A completer</span>
+              </div>
+              <p class="cert-org">Organisme: a ajouter</p>
+              <p>
+                Espace reserve pour decrire la certification, le programme et
+                les competences validees.
+              </p>
+              <ul class="cert-meta">
+                <li><strong>Domaine:</strong> Intelligence artificielle</li>
+                <li><strong>Date:</strong> a renseigner</li>
+                <li><strong>Niveau:</strong> a renseigner</li>
+              </ul>
+            </article>
+
+            <article class="card cert-card">
+              <div class="cert-head">
+                <h3>Certification Cybersecurite - A renseigner</h3>
+                <span class="cert-status">A completer</span>
+              </div>
+              <p class="cert-org">Organisme: a ajouter</p>
+              <p>
+                Espace reserve pour presenter les notions securite, la
+                prevention des risques et les bonnes pratiques techniques.
+              </p>
+              <ul class="cert-meta">
+                <li><strong>Domaine:</strong> Cybersecurite</li>
+                <li><strong>Date:</strong> a renseigner</li>
+                <li><strong>Niveau:</strong> a renseigner</li>
+              </ul>
+            </article>
+
+            <article class="card cert-card">
+              <div class="cert-head">
+                <h3>Certification Developpement - A renseigner</h3>
+                <span class="cert-status">A completer</span>
+              </div>
+              <p class="cert-org">Organisme: a ajouter</p>
+              <p>
+                Espace reserve pour valoriser les certifications liees au code,
+                aux frameworks et aux bonnes pratiques de qualite logicielle.
+              </p>
+              <ul class="cert-meta">
+                <li><strong>Domaine:</strong> Developpement</li>
+                <li><strong>Date:</strong> a renseigner</li>
+                <li><strong>Niveau:</strong> a renseigner</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="veilletechno" class="section section-alt">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Veille technologique</h2>
+            <p>
+              Veille ciblée sur trois axes: IA, langages de developpement et
+              cybersecurite applicative.
+            </p>
+          </div>
+
+          <div
+            class="watch-toolbar"
+            role="toolbar"
+            aria-label="Filtres de veille">
+            <div class="watch-filters">
+              <button
+                type="button"
+                class="watch-filter is-active"
+                data-category="all">
+                Toutes
+              </button>
+              <button type="button" class="watch-filter" data-category="ia">
+                IA
+              </button>
+              <button
+                type="button"
+                class="watch-filter"
+                data-category="language">
+                Langages
+              </button>
+              <button
+                type="button"
+                class="watch-filter"
+                data-category="cybersecurite">
+                Cybersecurite
+              </button>
+            </div>
+            <label class="watch-search" for="rss-search">
+              <span class="sr-only">Recherche dans la veille</span>
+              <input
+                id="rss-search"
+                type="search"
+                placeholder="Rechercher un sujet..."
+                autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="watch-memory">
+            <p id="watch-memory-info" class="watch-memory-info"></p>
+            <button
+              id="watch-clear-memory"
+              type="button"
+              class="btn btn-ghost btn-small">
+              Vider la memoire locale
+            </button>
+          </div>
+
+          <p id="rss-result-count" class="watch-result" aria-live="polite"></p>
+          <div id="rss-feed" class="watch-feed" aria-busy="true">
+            Chargement de la veille...
+          </div>
+          <div class="watch-more-wrap">
+            <button
+              id="watch-load-more"
+              type="button"
+              class="btn btn-ghost btn-small">
+              Afficher plus d'articles
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Rentrons en contact</h2>
+            <p>
+              Pour discuter d'un projet, d'une alternance ou d'une
+              collaboration.
+            </p>
+          </div>
+
+          <form class="contact-form">
+            <label>
+              Prenom
+              <input type="text" name="prenom" maxlength="32" required />
+            </label>
+            <label>
+              Nom
+              <input type="text" name="nom" maxlength="32" required />
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="5"
+                required
+                placeholder="Votre message..."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Tout droits reserves - Kilian Moliere <span id="year"></span></p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/rss.js"></script>
+    <script type="module" src="js/motion-ui.js"></script>
+  </body>
+</html>
