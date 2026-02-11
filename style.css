@@ -280,101 +280,153 @@ a {
   color: var(--brand);
 }
 
-.intro-motion {
+/* ── Intro Visual (Code Editor) ──────────────────── */
+.intro-visual {
   position: relative;
   justify-self: center;
   width: min(440px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid #d5dceb;
-  background:
-    radial-gradient(circle at 18% 22%, rgba(249, 115, 22, 0.18), transparent 40%),
-    radial-gradient(circle at 82% 78%, rgba(56, 189, 248, 0.16), transparent 44%),
-    linear-gradient(155deg, #f7f8fc 0%, #edf2f9 100%);
-  box-shadow: 0 24px 50px rgba(15, 30, 64, 0.16);
+  perspective: 900px;
 }
 
-.intro-motion-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(32, 60, 111, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(32, 60, 111, 0.08) 1px, transparent 1px);
-  background-size: 34px 34px;
-  opacity: 0.45;
-}
-
-.intro-motion-glow {
+.iv-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(14px);
+  filter: blur(60px);
   pointer-events: none;
+  opacity: 0;
 }
 
-.intro-motion-glow-a {
-  width: 180px;
-  height: 180px;
-  top: -36px;
-  left: -26px;
-  background: rgba(249, 115, 22, 0.33);
+.iv-glow--a {
+  width: 200px;
+  height: 200px;
+  top: -30px;
+  left: -40px;
+  background: rgba(249, 115, 22, 0.3);
 }
 
-.intro-motion-glow-b {
-  width: 220px;
-  height: 220px;
-  right: -48px;
-  bottom: -48px;
+.iv-glow--b {
+  width: 240px;
+  height: 240px;
+  right: -35px;
+  bottom: -25px;
   background: rgba(56, 189, 248, 0.25);
 }
 
-.intro-motion-shape {
-  position: absolute;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(32, 60, 111, 0.2);
-  background: rgba(255, 255, 255, 0.66);
-  box-shadow: 0 10px 24px rgba(15, 30, 64, 0.12);
-}
-
-.intro-motion-shape-a {
-  top: 16%;
-  left: 12%;
-  width: 60%;
-  height: 84px;
-  border-radius: 20px;
-}
-
-.intro-motion-shape-b {
-  bottom: 26%;
-  right: 14%;
-  width: 48%;
-  height: 68px;
+.iv-window {
+  position: relative;
   border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(32, 60, 111, 0.18);
+  background: #1a1f2e;
+  box-shadow:
+    0 30px 60px rgba(10, 20, 50, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  opacity: 0;
+  transform: translateY(30px) rotateX(6deg);
 }
 
-.intro-motion-shape-c {
-  left: 16%;
-  bottom: 12%;
-  width: 66%;
+.iv-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px;
+  background: #161a26;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.iv-dot {
+  width: 12px;
   height: 12px;
-  border-radius: 999px;
-  border-color: rgba(32, 60, 111, 0.28);
-  background: linear-gradient(90deg, #f97316, #38bdf8);
+  border-radius: 50%;
 }
 
-.intro-motion-label {
+.iv-dot--r { background: #ff5f56; }
+.iv-dot--y { background: #ffbd2e; }
+.iv-dot--g { background: #27c93f; }
+
+.iv-tab {
+  margin-left: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.02em;
+  font-family: "IBM Plex Sans", monospace;
+}
+
+.iv-editor {
+  padding: 20px 18px;
+  font-family: "IBM Plex Sans", monospace;
+  font-size: 0.82rem;
+  line-height: 1.85;
+}
+
+.iv-line {
+  display: block;
+  white-space: pre;
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+.iv-line::before {
+  content: attr(data-n);
+  display: inline-block;
+  width: 22px;
+  margin-right: 16px;
+  color: rgba(255, 255, 255, 0.16);
+  text-align: right;
+  font-size: 0.72rem;
+}
+
+.iv-kw  { color: #c678dd; }
+.iv-fn  { color: #61afef; }
+.iv-prop { color: #e06c75; }
+.iv-str { color: #98c379; }
+
+.iv-float {
   position: absolute;
-  top: 10%;
-  right: 12%;
-  border-radius: 999px;
-  padding: 0.36rem 0.74rem;
-  border: 1px solid rgba(32, 60, 111, 0.2);
-  background: rgba(255, 255, 255, 0.72);
-  color: #203c6f;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.iv-float--a {
+  top: 12%;
+  right: -16px;
+  background: rgba(249, 115, 22, 0.7);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+
+.iv-float--b {
+  bottom: 30%;
+  left: -20px;
+  background: rgba(32, 60, 111, 0.7);
+  box-shadow: 0 8px 20px rgba(32, 60, 111, 0.3);
+}
+
+.iv-float--c {
+  bottom: 8%;
+  right: 12%;
+  background: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+.iv-cursor {
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background: #61afef;
+  bottom: 36px;
+  left: 188px;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(97, 175, 239, 0.6);
 }
 
 .about-card {
@@ -1218,9 +1270,7 @@ a {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* GSAP handles opacity/transform — this is the fallback for no-JS */
 }
 
 .reveal.is-visible {
@@ -1264,9 +1314,9 @@ a {
     grid-column: span 1;
   }
 
-  .intro-motion {
+  .intro-visual {
     justify-self: end;
-    width: min(420px, 96%);
+    width: min(440px, 96%);
   }
 }
 

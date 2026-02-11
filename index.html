@@ -71,20 +71,31 @@
               >
             </div>
           </div>
-          <div class="intro-motion" aria-hidden="true" data-intro-motion>
-            <div class="intro-motion-grid"></div>
-            <div class="intro-motion-glow intro-motion-glow-a"></div>
-            <div class="intro-motion-glow intro-motion-glow-b"></div>
-            <div
-              class="intro-motion-shape intro-motion-shape-a"
-              data-motion-shape></div>
-            <div
-              class="intro-motion-shape intro-motion-shape-b"
-              data-motion-shape></div>
-            <div
-              class="intro-motion-shape intro-motion-shape-c"
-              data-motion-shape></div>
-            <div class="intro-motion-label">Creative Dev System</div>
+
+          <div class="intro-visual" aria-hidden="true">
+            <div class="iv-glow iv-glow--a"></div>
+            <div class="iv-glow iv-glow--b"></div>
+            <div class="iv-window">
+              <div class="iv-titlebar">
+                <span class="iv-dot iv-dot--r"></span>
+                <span class="iv-dot iv-dot--y"></span>
+                <span class="iv-dot iv-dot--g"></span>
+                <span class="iv-tab">portfolio.js</span>
+              </div>
+              <div class="iv-editor">
+                <code class="iv-line" data-n="1"><span class="iv-kw">const</span> <span class="iv-fn">dev</span> = {</code>
+                <code class="iv-line" data-n="2">  <span class="iv-prop">nom</span>: <span class="iv-str">'Kilian Moliere'</span>,</code>
+                <code class="iv-line" data-n="3">  <span class="iv-prop">formation</span>: <span class="iv-str">'BTS SIO SLAM'</span>,</code>
+                <code class="iv-line" data-n="4">  <span class="iv-prop">stack</span>: [<span class="iv-str">'JS'</span>, <span class="iv-str">'PHP'</span>, <span class="iv-str">'Flutter'</span>],</code>
+                <code class="iv-line" data-n="5">  <span class="iv-prop">passion</span>: <span class="iv-str">'Intelligence Artificielle'</span>,</code>
+                <code class="iv-line" data-n="6">  <span class="iv-fn">build</span>() { <span class="iv-kw">return</span> <span class="iv-str">'solutions utiles'</span>; }</code>
+                <code class="iv-line" data-n="7">};</code>
+              </div>
+            </div>
+            <div class="iv-float iv-float--a">SLAM</div>
+            <div class="iv-float iv-float--b">Dev</div>
+            <div class="iv-float iv-float--c">IA</div>
+            <div class="iv-cursor"></div>
           </div>
         </div>
       </section>
@@ -866,9 +877,11 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/rss.js"></script>
-    <script type="module" src="js/motion-ui.js"></script>
+    <script src="js/gsap-animations.js"></script>
   </body>
 </html>
