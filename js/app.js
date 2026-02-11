@@ -32,9 +32,8 @@
     if (!target) return;
 
     const words = [
-      'Apprenti developpeur',
-      'Frontend propre et responsive',
-      'Qualite de code et UX',
+      'Apprenti développeur',
+      'En formation en BTS SIO',
     ];
 
     let wordIndex = 0;
