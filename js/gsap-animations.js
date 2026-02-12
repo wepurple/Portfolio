@@ -121,7 +121,7 @@
   });
 
   /* ═══════════════════════════════════════════════════
-     2. SECTION REVEALS — ScrollTrigger
+     2. SECTION REVEALS 
      ═══════════════════════════════════════════════════ */
 
   // Generic reveal for .reveal containers (replaces CSS reveal + IntersectionObserver)
@@ -143,7 +143,7 @@
   });
 
   /* ═══════════════════════════════════════════════════
-     3. ABOUT PANELS — stagger on scroll
+     3. ABOUT PANELS 
      ═══════════════════════════════════════════════════ */
 
   var aboutPanels = gsap.utils.toArray('.about-panel');
@@ -163,7 +163,7 @@
   }
 
   /* ═══════════════════════════════════════════════════
-     4. PROJECT CARDS — fade up
+     4. PROJECT CARDS 
      ═══════════════════════════════════════════════════ */
 
   gsap.utils.toArray('.project-entry').forEach(function (card) {
@@ -181,7 +181,7 @@
   });
 
   /* ═══════════════════════════════════════════════════
-     5. SKILL CARDS — stagger scale-in
+     5. SKILL CARDS 
      ═══════════════════════════════════════════════════ */
 
   var skillCards = gsap.utils.toArray('.skill-card');
@@ -201,7 +201,7 @@
   }
 
   /* ═══════════════════════════════════════════════════
-     6. EXPERIENCE — slide from left
+     6. EXPERIENCE 
      ═══════════════════════════════════════════════════ */
 
   var expSummary = document.querySelector('.exp-summary');
@@ -235,7 +235,7 @@
   });
 
   /* ═══════════════════════════════════════════════════
-     7. CERTIFICATIONS — reveal
+     7. CERTIFICATIONS 
      ═══════════════════════════════════════════════════ */
 
   gsap.utils.toArray('.cert-card').forEach(function (card) {
