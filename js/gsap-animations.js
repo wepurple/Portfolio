@@ -7,6 +7,11 @@
   gsap.registerPlugin(ScrollTrigger);
   gsap.defaults({ ease: 'power3.out', duration: 0.7 });
 
+  /* ── États initiaux GSAP (évite le conflit avec les transforms CSS) ── */
+  gsap.set('.iv-window', { y: 30, rotateX: 6 });
+  gsap.set('.iv-line',   { x: -12 });
+  gsap.set('.iv-float',  { scale: 0.7 });
+
   /* ═══════════════════════════════════════════════════
      1. HERO — Code-editor visual
      ═══════════════════════════════════════════════════ */
