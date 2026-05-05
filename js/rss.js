@@ -26,13 +26,13 @@
     },
     {
       category: 'cybersecurite',
-      categoryLabel: 'Cybersecurite',
+      categoryLabel: 'Cybersécurité',
       source: 'The Hacker News',
       url: 'https://feeds.feedburner.com/TheHackersNews',
     },
     {
       category: 'cybersecurite',
-      categoryLabel: 'Cybersecurite',
+      categoryLabel: 'Cybersécurité',
       source: 'Krebs on Security',
       url: 'https://krebsonsecurity.com/feed/',
     },
@@ -173,7 +173,7 @@
   function categoryLabel(category) {
     if (category === 'ia') return 'IA';
     if (category === 'language') return 'Langages';
-    if (category === 'cybersecurite') return 'Cybersecurite';
+    if (category === 'cybersecurite') return 'Cybersécurité';
     return category;
   }
 
@@ -299,12 +299,12 @@
 
     const total = state.items.length;
     if (!total) {
-      memoryInfo.textContent = 'Memoire locale: vide';
+      memoryInfo.textContent = 'Mémoire locale : vide';
       return;
     }
 
     const latest = state.items[0];
-    memoryInfo.textContent = `Memoire locale: ${total} articles (dernier ajout: ${formatDate(
+    memoryInfo.textContent = `Mémoire locale : ${total} articles (dernier ajout : ${formatDate(
       latest.date
     )})`;
   }
@@ -316,8 +316,8 @@
 
     if (!visible.length) {
       feed.innerHTML =
-        '<div class="watch-empty">Aucun article ne correspond a votre filtre.</div>';
-      if (count) count.textContent = '0 resultat';
+        '<div class="watch-empty">Aucun article ne correspond à votre filtre.</div>';
+      if (count) count.textContent = '0 résultat';
       if (loadMoreButton) loadMoreButton.hidden = true;
       updateMemoryInfo();
       document.dispatchEvent(new CustomEvent('watch:rendered'));
@@ -355,7 +355,7 @@
     if (count) {
       count.textContent = `${visible.length}/${filtered.length} article${
         filtered.length > 1 ? 's' : ''
-      } affiche${visible.length > 1 ? 's' : ''} (${state.items.length} en memoire)`;
+      } affiché${visible.length > 1 ? 's' : ''} (${state.items.length} en mémoire)`;
     }
 
     if (loadMoreButton) {

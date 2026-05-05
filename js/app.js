@@ -106,7 +106,11 @@
       });
 
       card.addEventListener('pointerleave', () => {
+        card.style.transition = 'transform 0.4s ease';
         card.style.transform = '';
+        card.addEventListener('transitionend', () => {
+          card.style.transition = '';
+        }, { once: true });
       });
     }
 
@@ -155,7 +159,6 @@
     if (!cards.length) return;
 
     const typeFilter = q('[data-filter="type"]', catalog);
-    const domainFilter = q('[data-filter="domain"]', catalog);
     const techFilter = q('[data-filter="tech"]', catalog);
     const statusFilter = q('[data-filter="status"]', catalog);
     const queryFilter = q('[data-filter="query"]', catalog);
@@ -171,19 +174,16 @@
 
     function cardMatches(card) {
       const selectedType = normalize(typeFilter?.value || 'all');
-      const selectedDomain = normalize(domainFilter?.value || 'all');
       const selectedTech = normalize(techFilter?.value || 'all');
       const selectedStatus = normalize(statusFilter?.value || 'all');
       const query = normalize(queryFilter?.value || '');
 
       const type = normalize(card.dataset.type);
-      const domain = normalize(card.dataset.domain);
       const status = normalize(card.dataset.status);
       const tech = normalize(card.dataset.tech);
       const text = normalize(card.textContent);
 
       if (selectedType !== 'all' && type !== selectedType) return false;
-      if (selectedDomain !== 'all' && domain !== selectedDomain) return false;
       if (selectedStatus !== 'all' && status !== selectedStatus) return false;
       if (selectedTech !== 'all' && !tech.includes(selectedTech)) return false;
       if (query && !text.includes(query)) return false;
@@ -206,7 +206,7 @@
       if (countTarget) {
         countTarget.textContent = `${visible}/${matching.length} projet${
           matching.length > 1 ? 's' : ''
-        } affiche${visible > 1 ? 's' : ''}`;
+        } affiché${visible > 1 ? 's' : ''}`;
       }
 
       if (emptyTarget) {
@@ -218,7 +218,7 @@
       }
     }
 
-    [typeFilter, domainFilter, techFilter, statusFilter].forEach((field) => {
+    [typeFilter, techFilter, statusFilter].forEach((field) => {
       field?.addEventListener('change', () => {
         visibleLimit = PAGE_STEP;
         render();

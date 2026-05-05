@@ -280,6 +280,44 @@ a {
   color: var(--brand);
 }
 
+/* ── Download docs ───────────────────────────────── */
+.download-docs {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.7rem;
+}
+
+.download-docs-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.download-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.download-doc-link:hover,
+.download-doc-link:focus-visible {
+  border-color: rgba(15, 47, 122, 0.35);
+  color: var(--brand);
+  transform: translateY(-2px);
+}
+
 /* ── Intro Visual (Code Editor) ──────────────────── */
 .intro-visual {
   position: relative;
@@ -469,6 +507,165 @@ a {
 
 .about-panel p {
   margin: 0;
+}
+
+/* ── Formation ─────────────────────────────────────────── */
+.formation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formation-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.formation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(23, 23, 23, 0.12);
+}
+
+.formation-card-top {
+  padding: 1.4rem 1.4rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.formation-card--sisr .formation-card-top {
+  border-top: 4px solid var(--brand);
+}
+
+.formation-card--slam .formation-card-top {
+  border-top: 4px solid var(--brand-2);
+}
+
+.formation-kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.3rem;
+}
+
+.formation-card--sisr .formation-kicker {
+  color: var(--brand);
+}
+
+.formation-card--slam .formation-kicker {
+  color: var(--brand-2);
+}
+
+.formation-card-top h3 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #1f2d46;
+  margin-bottom: 0.4rem;
+}
+
+.formation-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.formation-title-row h3 {
+  margin-bottom: 0;
+}
+
+.formation-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--brand-2);
+  background: rgba(154, 90, 42, 0.1);
+  border: 1px solid rgba(154, 90, 42, 0.25);
+  border-radius: 20px;
+  padding: 0.18rem 0.65rem;
+  white-space: nowrap;
+}
+
+.formation-fullname {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.formation-card-body {
+  padding: 1.2rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.formation-card-body > p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.formation-jobs-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+}
+
+.formation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formation-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #1f2d46;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.formation-list li:last-child {
+  border-bottom: none;
+}
+
+.formation-list li::before {
+  content: "–";
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.formation-card--sisr .formation-list li::before {
+  color: var(--brand);
+}
+
+.formation-card--slam .formation-list li::before {
+  color: var(--brand-2);
+}
+
+@media (max-width: 700px) {
+  .formation-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .btn {
@@ -669,6 +866,12 @@ a {
   padding: 0.2rem 0.58rem;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
 .project-empty {
   border: 1px dashed #b8c5dc;
   border-radius: 10px;
@@ -774,11 +977,10 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   padding: 0.85rem;
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 255, 255, 0.36);
 }
