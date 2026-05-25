@@ -159,7 +159,6 @@
     if (!cards.length) return;
 
     const typeFilter = q('[data-filter="type"]', catalog);
-    const techFilter = q('[data-filter="tech"]', catalog);
     const statusFilter = q('[data-filter="status"]', catalog);
     const queryFilter = q('[data-filter="query"]', catalog);
     const countTarget = q('[data-project-count]', catalog);
@@ -174,18 +173,15 @@
 
     function cardMatches(card) {
       const selectedType = normalize(typeFilter?.value || 'all');
-      const selectedTech = normalize(techFilter?.value || 'all');
       const selectedStatus = normalize(statusFilter?.value || 'all');
       const query = normalize(queryFilter?.value || '');
 
       const type = normalize(card.dataset.type);
       const status = normalize(card.dataset.status);
-      const tech = normalize(card.dataset.tech);
       const text = normalize(card.textContent);
 
       if (selectedType !== 'all' && type !== selectedType) return false;
       if (selectedStatus !== 'all' && status !== selectedStatus) return false;
-      if (selectedTech !== 'all' && !tech.includes(selectedTech)) return false;
       if (query && !text.includes(query)) return false;
 
       return true;
@@ -218,7 +214,7 @@
       }
     }
 
-    [typeFilter, techFilter, statusFilter].forEach((field) => {
+    [typeFilter, statusFilter].forEach((field) => {
       field?.addEventListener('change', () => {
         visibleLimit = PAGE_STEP;
         render();
