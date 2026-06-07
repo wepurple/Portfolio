@@ -1073,12 +1073,21 @@ a {
 .cert-status {
   border-radius: 8px;
   padding: 0.18rem 0.5rem;
-  background: rgba(249, 115, 22, 0.16);
-  border: 1px solid rgba(249, 115, 22, 0.45);
-  color: #fdba74;
   font-size: 0.74rem;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.cert-status-progress {
+  background: rgba(249, 115, 22, 0.16);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  color: #fdba74;
+}
+
+.cert-status-done {
+  background: rgba(34, 197, 94, 0.16);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #86efac;
 }
 
 .cert-org {
